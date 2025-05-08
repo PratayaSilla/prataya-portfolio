@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
     }
   };
 
-  // Close menu when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isOpen && 

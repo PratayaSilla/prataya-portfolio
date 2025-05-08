@@ -25,12 +25,12 @@ const AboutSection = () => {
   }, []);
 
   const techStack = [
-    { name: "React", color: "#61DAFB" },
-    { name: "Node.js", color: "#68A063" },
-    { name: "Three.js", color: "#049EF4" },
-    { name: "Figma", color: "#A259FF" },
-    { name: "GSAP", color: "#88CE02" },
-    { name: "Firebase", color: "#FFCA28" },
+    { name: "HTML", color: "#61DAFB" },
+    { name: "CSS", color: "#68A063" },
+    { name: "Javascript", color: "#049EF4" },
+    { name: "React", color: "#A259FF" },
+    { name: "Python", color: "#88CE02" },
+    { name: "XD", color: "#FFCA28" },
   ];
 
   return (
@@ -41,12 +41,8 @@ const AboutSection = () => {
             <span className="yellow">/</span>about-me
           </h2>
           <p className="about-text">
-            I'm a <span className="teal">creative developer</span> who builds 
-            digital experiences that <span className="orange">blend design</span> 
-            and <span className="pink">technology</span>. With a background in 
-            both <span className="yellow">UI/UX</span> and 
-            <span className="teal"> full-stack development</span>, I bridge the gap 
-            between aesthetics and functionality.
+            I'm a <span className="teal">curious builder</span> passionate about crafting <span className="orange">interactive experiences</span> that merge <span className="pink">logic-driven code</span>. With <span className="yellow">intentional design</span> And hands-on practice in
+            <span className="teal"> full-stack development</span>,  I aim to turn ideas into smooth, impactful products..
           </p>
         </div>
 
@@ -78,10 +74,9 @@ const AboutSection = () => {
           <div className="fact-bubble">
             <span className="fact-icon">💡</span>
             <p>
-              Fun fact: I once built a <span className="yellow">3D portfolio</span> that 
-              accidentally <span className="pink">crashed</span> browsers on 
-              <span className="teal"> mobile devices</span>! Learned about 
-              <span className="orange"> performance optimization</span> the hard way.
+              Fun fact: I once got so deep into setting up <span className="yellow">React routing</span> that I nearly broke my entire <span className="pink">project preview</span> which I was not able to figure
+              <span className="teal"> on browser</span> thankfully, a calm chat with my
+              <span className="orange"> friend</span> helped me trace it back.
             </p>
           </div>
         </div>
