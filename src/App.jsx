@@ -6,6 +6,7 @@ import HamburgerMenu from './components/Hamburger/HamburgerMenu'
 import HeroSection from './components/Hero-section.jsx/HeroSection'
 import ProjectsSection from './components/ProjectsSection/ProjectsSection'
 
+
 function App() {
   return (
     <>

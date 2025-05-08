@@ -16,7 +16,7 @@ const HeroSection = () => {
           <span className="yellow">a 👋🏻</span>
         </h1>
         <h1 className="hero-heading">
-          <span className="cream">Makes Fascination in </span>
+          <span className="cream">I Make Fascination in </span>
           <span className="orange">Design 🎨</span>
           <span className="cream"> and </span>
           <span className="teal">Tech</span>
