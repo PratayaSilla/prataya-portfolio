@@ -8,16 +8,10 @@ import ProjectsSection from './components/ProjectsSection/ProjectsSection'
 import FigmaDesigns from './Pages/Design-Showcase/FigmaDesigns'
 
 
-function App() {
+function App({children}) {
   return (
     <>
-    <HamburgerMenu />
-     <HeroSection />
-     <AboutSection />
-     <ProjectsSection />
-     <EducationSection />
-     <FooterContact />
-     <FigmaDesigns />
+    {children}
     </>
   )
 }
