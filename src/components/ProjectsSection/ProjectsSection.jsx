@@ -5,10 +5,10 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Learnio",
-      description: "Study source for students with quizzes & notes",
-      tags: ["HTML", "CSS", "React"],
+      description: "This project is under construction 🚧. Could be the best, So its here!",
+      tags: ["Surprise", "Surprise", "Surprise"],
       accentColor: "#049EF4",
-      link: "#" 
+      link: "/" 
     },
     {
       title: "Portfolio Template",
@@ -25,9 +25,9 @@ const ProjectsSection = () => {
       link: "https://progenix-ai.vercel.app/" 
     },
     {
-      title: "More",
-      description: "Get to know about more of my projects",
-      tags: ["React", "After Effects", "Figma"],
+      title: "You came for Designs?",
+      description: "Click here to explore my work✨",
+      tags: ["Adobe XD", "Figma"],
       accentColor: "#ffd700",
       link: "https://github.com/PratayaSilla" 
     }

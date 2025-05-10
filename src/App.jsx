@@ -5,6 +5,7 @@ import FooterContact from './components/FooterContact/FooterContact'
 import HamburgerMenu from './components/Hamburger/HamburgerMenu'
 import HeroSection from './components/Hero-section.jsx/HeroSection'
 import ProjectsSection from './components/ProjectsSection/ProjectsSection'
+import FigmaDesigns from './Pages/Design-Showcase/FigmaDesigns'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
      <ProjectsSection />
      <EducationSection />
      <FooterContact />
+     <FigmaDesigns />
     </>
   )
 }

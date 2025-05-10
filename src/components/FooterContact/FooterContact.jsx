@@ -64,7 +64,7 @@ const FooterContact = () => {
             <p>Ready to collaborate?</p>
             <button 
               className="cta-button"
-              onClick={() => window.location.href = 'mailto:your.email@example.com'}
+              onClick={() => window.location.href = "mailto:proprataya339@gmail.com?cc=yourmail@domain.com&subject=Let's%20Work%20Together&body=Hey%2C%20Prataya!"}
             >
               Let's Build Something
             </button>
