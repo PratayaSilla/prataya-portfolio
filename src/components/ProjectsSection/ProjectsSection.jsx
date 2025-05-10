@@ -1,23 +1,24 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./ProjectsSection.css";
-import { Link, Links } from "react-router-dom";
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "Learnio",
-      description:
-        "This project is under construction 🚧. Could be the best, So its here!",
+      description: "This project is under construction 🚧. Could be the best, So its here!",
       tags: ["Surprise", "Surprise", "Surprise"],
       accentColor: "#049EF4",
       link: "/",
+      image: ""
     },
     {
       title: "Portfolio Template",
-      description: "Your custom devfolio !",
+      description: "Your custom devfolio!",
       tags: ["HTML", "CSS", "React"],
       accentColor: "#A259FF",
       link: "https://portfolio-template-beta-olive.vercel.app/",
+      image: ""
     },
     {
       title: "AI Image Generator",
@@ -25,21 +26,24 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#FF6347",
       link: "https://progenix-ai.vercel.app/",
+      image: ""
     },
     {
-      title: "You came for Designs?",
+      title: "More",
       description: "Click here to explore my work✨",
       tags: ["Adobe XD", "Figma"],
       accentColor: "#ffd700",
       link: "https://github.com/PratayaSilla",
+      image: ""
     },
     {
       title: "You came for Designs?",
       description: "Click here to explore my work✨",
       tags: ["Adobe XD", "Figma"],
-      accentColor: "#ffd700",
-      href: "/figma-designs",
-    },
+      accentColor: "#fff",
+      link: "/figma-designs",
+      image: ""
+    }
   ];
 
   const sectionRef = useRef(null);
@@ -64,8 +68,10 @@ const ProjectsSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleProjectClick = (link) => {
-    window.open(link, "_blank", "noopener,noreferrer");
+  const handleProjectClick = (link, isExternal) => {
+    if (isExternal) {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
@@ -82,27 +88,27 @@ const ProjectsSection = () => {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project, index) =>
-          project.link ? (
+        {projects.map((project, index) => {
+          const isExternal = project.link.startsWith("http");
+          
+          return isExternal ? (
             <div
               key={index}
               className="project-tile"
               style={{ "--accent-color": project.accentColor }}
-              data-index={index}
-              onClick={() => {
-                project.link ? handleProjectClick(project.link) : "";
-              }}
+              onClick={() => handleProjectClick(project.link, true)}
               role="button"
               tabIndex={0}
             >
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
+              </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tags">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="tag">
-                      {tag}
-                    </span>
+                    <span key={i} className="tag">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -111,31 +117,33 @@ const ProjectsSection = () => {
             </div>
           ) : (
             <Link 
-            to="/figma-designs"
+              to={project.link}
+              key={index}
+              className="project-link-wrapper"
+              style ={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-            <div 
-            key={index}
-            className="project-tile"
-            style={{ '--accent-color': project.accentColor }}
-            data-index={index}
-            role="button"
-            tabIndex={0}
-          >
-            <div className="project-content">
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <div className="project-tags">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="tag">{tag}</span>
-                ))}
+              <div 
+                className="project-tile"
+                style={{ "--accent-color": project.accentColor }}
+              >
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="project-overlay"></div>
+                <div className="project-border"></div>
               </div>
-            </div>
-            <div className="project-overlay"></div>
-            <div className="project-border"></div>
-          </div>
-          </Link>
-          )
-        )}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
