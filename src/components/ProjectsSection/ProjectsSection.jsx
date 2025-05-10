@@ -4,28 +4,32 @@ import './ProjectsSection.css';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "3D Portfolio Experience",
-      description: "Immersive WebGL portfolio with custom shaders",
-      tags: ["Three.js", "GSAP", "GLSL"],
-      accentColor: "#049EF4"
+      title: "Learnio",
+      description: "Study source for students with quizzes & notes",
+      tags: ["HTML", "CSS", "React"],
+      accentColor: "#049EF4",
+      link: "#" 
     },
     {
-      title: "AI Music Generator",
-      description: "Machine learning app that creates original compositions",
-      tags: ["TensorFlow.js", "React", "Node"],
-      accentColor: "#A259FF"
+      title: "Portfolio Template",
+      description: "Your custom devfolio !",
+      tags: ["HTML", "CSS", "React"],
+      accentColor: "#A259FF",
+      link: "https://portfolio-template-beta-olive.vercel.app/" 
     },
     {
-      title: "AR Shopping Assistant",
-      description: "Mobile AR app for virtual product try-ons",
-      tags: ["ARKit", "Swift", "Firebase"],
-      accentColor: "#FF6347"
+      title: "AI Image Generator",
+      description: "Frontend landing page of an AI Image generator",
+      tags: ["HTML", "CSS", "React"],
+      accentColor: "#FF6347",
+      link: "https://progenix-ai.vercel.app/" 
     },
     {
-      title: "Blockchain Dashboard",
-      description: "Real-time crypto analytics visualization",
-      tags: ["Web3.js", "D3.js", "Ethereum"],
-      accentColor: "#68A063"
+      title: "More",
+      description: "Get to know about more of my projects",
+      tags: ["React", "After Effects", "Figma"],
+      accentColor: "#ffd700",
+      link: "https://github.com/PratayaSilla" 
     }
   ];
 
@@ -51,6 +55,10 @@ const ProjectsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleProjectClick = (link) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="projects" className="projects-section" ref={sectionRef}>
       <div className="section-header">
@@ -70,6 +78,9 @@ const ProjectsSection = () => {
             className="project-tile"
             style={{ '--accent-color': project.accentColor }}
             data-index={index}
+            onClick={() => handleProjectClick(project.link)}
+            role="button"
+            tabIndex={0}
           >
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>

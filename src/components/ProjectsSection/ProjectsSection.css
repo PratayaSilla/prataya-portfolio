@@ -45,6 +45,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
+    cursor: pointer;
   }
   
   .project-tile.animate-in {
@@ -145,19 +146,17 @@
     border-color: var(--accent-color);
     box-shadow: 0 0 20px var(--accent-color);
   }
-  
-  /* Mouse position tracking */
+
   .projects-grid:hover .project-tile::before {
     opacity: 1;
   }
-  
-  /* Color Classes */
+
   .yellow { color: #ffd700; }
   .teal { color: #4ecdc4; }
   .pink { color: #f8a5c2; }
   .orange { color: #ff6347; }
   
-  /* Responsive */
+
   @media (max-width: 768px) {
     .projects-section {
       padding: 5rem 1.5rem;
