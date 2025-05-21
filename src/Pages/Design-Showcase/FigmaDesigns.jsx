@@ -25,7 +25,7 @@ const FigmaDesigns = () => {
       title: "More Designs",
       description: "Checkout my Behance profile for more!",
       image: "./behance.jpg",
-      link: "#"
+      link: "https://www.behance.net/pratayaforwork"
     }
   ];
 
