@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       tags: ["Surprise", "Surprise", "Surprise"],
       accentColor: "#049EF4",
       link: "/",
-      image: ""
+      image: "./learnio.png"
     },
     {
       title: "Portfolio Template",
@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#A259FF",
       link: "https://portfolio-template-beta-olive.vercel.app/",
-      image: ""
+      image: "./ptemplate.png"
     },
     {
       title: "AI Image Generator",
@@ -26,23 +26,23 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#FF6347",
       link: "https://progenix-ai.vercel.app/",
-      image: ""
+      image: "./aihero.png"
     },
     {
       title: "More",
       description: "Click here to explore my work✨",
-      tags: ["Adobe XD", "Figma"],
+      tags: ["My GitHub Profile"],
       accentColor: "#ffd700",
       link: "https://github.com/PratayaSilla",
-      image: ""
+      image: "./more.svg"
     },
     {
       title: "You came for Designs?",
-      description: "Click here to explore my work✨",
+      description: "Click here to explore my designs🎨",
       tags: ["Adobe XD", "Figma"],
       accentColor: "#fff",
       link: "/figma-designs",
-      image: ""
+      image: "./Cover.png"
     }
   ];
 
