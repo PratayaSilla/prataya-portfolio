@@ -5,26 +5,26 @@ const FigmaDesigns = () => {
   const designs = [
     {
       title: "Portfolio UI Kit",
-      description: "Complete design system for developer portfolios",
-      image: "/figma-1.jpg",
-      link: "#"
+      description: "Complete design system for Designer portfolios",
+      image: "./ptemplate.png",
+      link: "https://www.figma.com/design/Sk3Qb5znZjxTr4mw4G5t1V/Portfolio-Design?node-id=0-1&t=QwTb2lgQ4b5BOmrb-1"
     },
     {
-      title: "3D App Concept",
-      description: "Futuristic interface with spatial interactions",
-      image: "/figma-2.jpg",
-      link: "#"
+      title: "Waitit App",
+      description: "A 10 minute delivery app but within traffic",
+      image: "./waitit.png",
+      link: "https://www.figma.com/design/G3uLOrslVMR0WL35fuyDdd/Project-Waitit?node-id=0-1&t=oI2i6Q5EWbp0p45s-1"
     },
     {
-      title: "Neon Dashboard",
-      description: "Dark mode analytics dashboard with glow effects",
-      image: "/figma-3.jpg",
-      link: "#"
+      title: "Interactive Burger",
+      description: "A website where you can play with the burger",
+      image: "./burger.png",
+      link: "https://www.figma.com/design/XHXJSAowh4uaq0fplKhFng/Burger-Interactive?node-id=0-1&t=hWX7QT1hp0UwJK5I-1"
     },
     {
-      title: "Wireframe Pack",
-      description: "100+ customizable mobile wireframes",
-      image: "/figma-4.jpg",
+      title: "More Designs",
+      description: "Checkout my Behance profile for more!",
+      image: "./behance.jpg",
       link: "#"
     }
   ];
@@ -90,6 +90,7 @@ const FigmaDesigns = () => {
           ))}
         </div>
       </div>
+      <button className='back-btn' onClick={() => window.history.back()}>← Back</button>
     </section>
   );
 };

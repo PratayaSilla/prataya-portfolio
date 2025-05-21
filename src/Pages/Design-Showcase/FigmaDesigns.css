@@ -126,6 +126,16 @@
   transform: translateX(5px);
 }
 
+.back-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
 
 .yellow { color: #ffd700; }
 .teal { color: #4ecdc4; }

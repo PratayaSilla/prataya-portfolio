@@ -6,10 +6,10 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Learnio",
-      description: "This project is under construction 🚧. Could be the best, So its here!",
-      tags: ["Surprise", "Surprise", "Surprise"],
+      description: "A page where students can study with notes, quizzes and more",
+      tags: ["HTML", "CSS", "React"],
       accentColor: "#049EF4",
-      link: "/",
+      link: "https://learnio-eight.vercel.app",
       image: "./learnio.png"
     },
     {
