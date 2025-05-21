@@ -1,12 +1,42 @@
-# React + Vite
+# 🚀 Prataya's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there! Welcome to the codebase of my personal developer portfolio — built to showcase my projects, skills, and creative work across web development and motion design.
 
-Currently, two official plugins are available:
+🔗 **Live Site**: [prataya-portfolio.vercel.app](https://prataya-portfolio.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚡ Fast and responsive UI built with **React**
+- 🎨 Custom design inspired by dev aesthetics with motion-enhanced cards
+- 🧠 Dynamic project cards powered by a structured project array
+- 🎬 Dedicated space for my **video editing & motion graphics** work
+- 💻 Easily scalable & open to enhancements
+
+---
+
+## 📁 Tech Stack
+
+| Tech       | Role               |
+|------------|--------------------|
+| React      | Frontend Framework |
+| React Router | Page Navigation  |
+| CSS        | Styling (custom and responsive) |
+| Vite       | Lightning-fast bundler |
+| Vercel     | Deployment         |
+
+---
+
+## 🖼 Preview
+
+![screenshot](./preview.png) <!-- Optional: Add a screenshot of the site if you want -->
+
+---
+
+## 🛠 How to Run Locally
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/PratayaSilla/prataya-portfolio.git
+   cd prataya-portfolio
