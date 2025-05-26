@@ -7,13 +7,7 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-heading">
           <span className="cream">Hey, it's </span>
-          <span className="yellow">Pr</span>
-          <span className="yellow">at</span>
-          <span className="yellow">ay</span>
-          <span className="yellow">a </span>
-          <span className="yellow">Si</span>
-          <span className="yellow">ll</span>
-          <span className="yellow">a 👋🏻</span>
+          <span className="yellow">Prataya Silla 👋🏻</span>
         </h1>
         <h1 className="hero-heading">
           <span className="cream">I Make Fascination in </span>
