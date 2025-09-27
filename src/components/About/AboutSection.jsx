@@ -25,12 +25,12 @@ const AboutSection = () => {
   }, []);
 
   const techStack = [
-    { name: "HTML", color: "#61DAFB" },
-    { name: "CSS", color: "#68A063" },
-    { name: "Javascript", color: "#049EF4" },
-    { name: "React", color: "#A259FF" },
+    { name: "Javascript", color: "#61DAFB" },
+    { name: "Node.js", color: "#68A063" },
+    { name: "React.js", color: "#049EF4" },
+    { name: "MySQL", color: "#A259FF" },
     { name: "Python", color: "#88CE02" },
-    { name: "XD", color: "#FFCA28" },
+    { name: "Figma", color: "#FFCA28" },
   ];
 
   return (

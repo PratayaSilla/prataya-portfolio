@@ -66,7 +66,7 @@ const FooterContact = () => {
               className="cta-button"
               onClick={() => window.location.href = "mailto:proprataya339@gmail.com?cc=yourmail@domain.com&subject=Let's%20Work%20Together&body=Hey%2C%20Prataya!"}
             >
-              Let's Build Something
+              Let's Connect
             </button>
           </div>
         </div>
@@ -74,7 +74,7 @@ const FooterContact = () => {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} No rights reserved 👍🏻</p>
-        <p>Built with React and passion</p>
+        <p>Built with React</p>
       </div>
     </footer>
   );

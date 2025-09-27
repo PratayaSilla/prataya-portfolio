@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       image: "./aihero.png"
     },
     {
-      title: "More",
+      title: "More Projects",
       description: "Click here to explore my work✨",
       tags: ["My GitHub Profile"],
       accentColor: "#ffd700",
@@ -43,6 +43,14 @@ const ProjectsSection = () => {
       accentColor: "#fff",
       link: "/figma-designs",
       image: "./Cover.png"
+    },
+    {
+      title: "Coming up",
+      description: "More cool projects are on the way",
+      tags: ["React", "Node.js"," Figma"],
+      accentColor: "#5bff45ff",
+      link: "#",
+      image: "/stay_tuned.jpg"
     }
   ];
 
@@ -83,7 +91,8 @@ const ProjectsSection = () => {
         <p className="section-subtitle">
           <span className="teal">Things I've built</span> with{" "}
           <span className="pink">passion</span> and
-          <span className="orange"> cutting-edge tech</span>
+          <span className="orange"> more on the way</span>
+          <span> ( I know these tech stack feels outdated tho )</span>
         </p>
       </div>
 
