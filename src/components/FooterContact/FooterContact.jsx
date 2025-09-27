@@ -23,7 +23,7 @@ const FooterContact = () => {
           <div className="contact-method">
             <FaPhoneAlt className="contact-icon" />
             <div>
-              <h3>Phone</h3>
+              <h3>Leave a message</h3>
               <a href="tel:+918917375064">+91 8917375064</a>
             </div>
           </div>

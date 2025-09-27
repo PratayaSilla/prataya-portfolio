@@ -109,14 +109,13 @@
     background: #1a1a1a;
     padding: 0 10px;
   }
-  
-  /* Color Classes (matches hero section) */
+
   .yellow { color: #ffd700; }
   .teal { color: #4ecdc4; }
   .pink { color: #f8a5c2; }
   .orange { color: #ff6347; }
   
-  /* Glow Effects */
+
   .about-text span {
     transition: text-shadow 0.3s ease;
   }
@@ -125,7 +124,7 @@
     text-shadow: 0 0 8px currentColor;
   }
   
-  /* Responsive Adjustments */
+
   @media (max-width: 768px) {
     .about-section {
       padding: 5rem 1.5rem;
