@@ -3,6 +3,21 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhoneAlt } from 'react-i
 import { SiLeetcode } from 'react-icons/si';
 
 const FooterContact = () => {
+  const scrollToSection = (id) => {
+    if (id === 'home') {
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  };
+
   return (
     <footer id="contact" className="footer-contact">
       <div className="footer-grid">
@@ -35,7 +50,12 @@ const FooterContact = () => {
           <ul>
             {['home', 'about', 'projects', 'education', 'contact'].map((item) => (
               <li key={item}>
-                <a href={`#${item}`}>{item.charAt(0).toUpperCase() + item.slice(1)}</a>
+                <button 
+                  onClick={() => scrollToSection(item)}
+                  className="nav-link-button"
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </button>
               </li>
             ))}
           </ul>
@@ -74,7 +94,7 @@ const FooterContact = () => {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} No rights reserved 👍🏻</p>
-        <p>Built with React</p>
+        <p>Stoned af🗿</p>
       </div>
     </footer>
   );
