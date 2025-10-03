@@ -1,6 +1,10 @@
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ProjectsSection.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectsSection = () => {
   const projects = [
@@ -55,30 +59,136 @@ const ProjectsSection = () => {
   ];
 
   const sectionRef = useRef(null);
+  const projectsGridRef = useRef(null);
+  const tilesRef = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in");
+    const ctx = gsap.context(() => {
+      gsap.from(".section-header", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none"
+        }
+      });
+
+      gsap.fromTo(tilesRef.current,
+        {
+          y: 40,
+          opacity: 0
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: projectsGridRef.current,
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "play none none none",
+            markers: false
           }
-        });
-      },
-      { threshold: 0.1 }
-    );
+        }
+      );
 
-    if (sectionRef.current) {
-      const elements = sectionRef.current.querySelectorAll(".project-tile");
-      elements.forEach((el) => observer.observe(el));
-    }
+    }, sectionRef);
 
-    return () => observer.disconnect();
+    return () => ctx.revert();
   }, []);
 
-  const handleProjectClick = (link, isExternal) => {
-    if (isExternal) {
-      window.open(link, "_blank", "noopener,noreferrer");
+  const handleProjectClick = (link, isExternal, index) => {
+    const tile = tilesRef.current[index];
+    if (tile) {
+      gsap.to(tile, {
+        scale: 0.98,
+        duration: 0.15,
+        yoyo: true,
+        repeat: 1,
+        onComplete: () => {
+          if (isExternal) {
+            window.open(link, "_blank", "noopener,noreferrer");
+          }
+        }
+      });
+    }
+  };
+
+  const handleProjectHover = (index, isHovering) => {
+    const tile = tilesRef.current[index];
+    if (!tile) return;
+
+    const content = tile.querySelector('.project-content');
+    const tags = tile.querySelectorAll('.tag');
+    const image = tile.querySelector('.project-image');
+    const border = tile.querySelector('.project-border');
+
+    if (isHovering) {
+      gsap.to(tile, {
+        y: -8,
+        scale: 1.02,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      gsap.to(content, {
+        y: 0,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+      gsap.to(tags, {
+        y: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+      gsap.to(image, {
+        opacity: 0.2,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      gsap.to(border, {
+        borderColor: "var(--accent-color)",
+        boxShadow: "0 0 25px var(--accent-color)",
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+    } else {
+      gsap.to(tile, {
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+
+      gsap.to(content, {
+        y: 10,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+
+      gsap.to(image, {
+        opacity: 0.45,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      gsap.to(border, {
+        borderColor: "rgba(255, 255, 255, 0.1)",
+        boxShadow: "none",
+        duration: 0.3,
+        ease: "power2.out"
+      });
     }
   };
 
@@ -96,7 +206,7 @@ const ProjectsSection = () => {
         </p>
       </div>
 
-      <div className="projects-grid">
+      <div className="projects-grid" ref={projectsGridRef}>
         {projects.map((project, index) => {
           const isExternal = project.link.startsWith("http");
           
@@ -105,7 +215,10 @@ const ProjectsSection = () => {
               key={index}
               className="project-tile"
               style={{ "--accent-color": project.accentColor }}
-              onClick={() => handleProjectClick(project.link, true)}
+              onClick={() => handleProjectClick(project.link, true, index)}
+              onMouseEnter={() => handleProjectHover(index, true)}
+              onMouseLeave={() => handleProjectHover(index, false)}
+              ref={el => tilesRef.current[index] = el}
               role="button"
               tabIndex={0}
             >
@@ -134,6 +247,9 @@ const ProjectsSection = () => {
               <div 
                 className="project-tile"
                 style={{ "--accent-color": project.accentColor }}
+                onMouseEnter={() => handleProjectHover(index, true)}
+                onMouseLeave={() => handleProjectHover(index, false)}
+                ref={el => tilesRef.current[index] = el}
               >
                 <div className="project-image-container">
                   <img src={project.image} alt={project.title} className="project-image" />
