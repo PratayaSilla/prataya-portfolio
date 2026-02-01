@@ -36,7 +36,7 @@ const FigmaDesigns = () => {
     {
       title: "Real Portfolio ?",
       description: "I designed this for my big brothaa.",
-      image: "/Screenshot 2026-02-01 at 7.10.47 PM.png",
+      image: "/Screenshot 2026-02-01 at 7.10.47 PM.png",
       link: "https://www.figma.com/design/fzRRUpvotTWvsmyjQyuGEo/Shishir-Patra?node-id=0-1&t=PBxnerWS7Q3zJo8b-1"
     },
     {
