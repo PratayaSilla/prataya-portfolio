@@ -1,9 +1,12 @@
 {
   "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "react-router",
-  "regions": ["sfo1"],
+  "regions": [
+    "sfo1"
+  ],
   "env": {
     "NODE_ENV": "production"
   },
