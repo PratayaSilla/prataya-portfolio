@@ -11,10 +11,10 @@ const ProjectsSection = () => {
     {
       title: "Wondrr",
       description: "A marketplace for group departures",
-      tags: ["NextTS", "MongoDB", "Redis","AWS","Express"],
+      tags: ["NextTS", "MongoDB", "Redis", "AWS", "Express"],
       accentColor: "#049EF4",
       link: "https://wondrr.in/",
-      image: "./Wondrr_jpg.jpg"
+      image: "/Wondrr_jpg.jpg"
     },
     {
       title: "Learnio",
@@ -22,7 +22,7 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#02c21b",
       link: "https://learnio-zeta.vercel.app/",
-      image: "./learnio.png"
+      image: "/learnio.png"
     },
     {
       title: "Portfolio Template",
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#A259FF",
       link: "https://portfolio-template-beta-olive.vercel.app/",
-      image: "./ptemplate.png"
+      image: "/ptemplate.png"
     },
     {
       title: "AI Image Generator",
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       tags: ["HTML", "CSS", "React"],
       accentColor: "#FF6347",
       link: "https://progenix-ai.vercel.app/",
-      image: "./aihero.png"
+      image: "/aihero.png"
     },
     {
       title: "More Projects",
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       tags: ["My GitHub Profile"],
       accentColor: "#ffd700",
       link: "https://github.com/PratayaSilla",
-      image: "./more.svg"
+      image: "/more.svg"
     },
     {
       title: "You came for Designs?",
@@ -54,12 +54,12 @@ const ProjectsSection = () => {
       tags: ["Figma", "AdobeXD"],
       accentColor: "#fff",
       link: "/figma-designs",
-      image: "./Cover.png"
+      image: "/Cover.png"
     },
     {
       title: "Coming up",
       description: "More cool projects are on the way",
-      tags: ["React", "Node.js"," Figma"],
+      tags: ["React", "Node.js", " Figma"],
       accentColor: "rgb(149, 174, 255)",
       link: "#",
       image: "/stay_tuned.jpg"
@@ -217,7 +217,7 @@ const ProjectsSection = () => {
       <div className="projects-grid" ref={projectsGridRef}>
         {projects.map((project, index) => {
           const isExternal = project.link.startsWith("http");
-          
+
           return isExternal ? (
             <div
               key={index}
@@ -246,13 +246,13 @@ const ProjectsSection = () => {
               <div className="project-border"></div>
             </div>
           ) : (
-            <Link 
+            <Link
               to={project.link}
               key={index}
               className="project-link-wrapper"
-              style ={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+              style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <div 
+              <div
                 className="project-tile"
                 style={{ "--accent-color": project.accentColor }}
                 onMouseEnter={() => handleProjectHover(index, true)}
