@@ -9,11 +9,19 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "Wondrr",
+      description: "A marketplace for group departures",
+      tags: ["NextTS", "MongoDB", "Redis","AWS","Express"],
+      accentColor: "#049EF4",
+      link: "https://wondrr.in/",
+      image: "./Wondrr_jpg.jpg"
+    },
+    {
       title: "Learnio",
       description: "A page where students can study with notes, quizzes and more",
       tags: ["HTML", "CSS", "React"],
-      accentColor: "#049EF4",
-      link: "https://learnio-eight.vercel.app",
+      accentColor: "#02c21b",
+      link: "https://learnio-zeta.vercel.app/",
       image: "./learnio.png"
     },
     {
@@ -43,7 +51,7 @@ const ProjectsSection = () => {
     {
       title: "You came for Designs?",
       description: "Click here to explore my designs🎨",
-      tags: ["Adobe XD", "Figma"],
+      tags: ["Figma", "AdobeXD"],
       accentColor: "#fff",
       link: "/figma-designs",
       image: "./Cover.png"
@@ -52,7 +60,7 @@ const ProjectsSection = () => {
       title: "Coming up",
       description: "More cool projects are on the way",
       tags: ["React", "Node.js"," Figma"],
-      accentColor: "#5bff45ff",
+      accentColor: "rgb(149, 174, 255)",
       link: "#",
       image: "/stay_tuned.jpg"
     }
