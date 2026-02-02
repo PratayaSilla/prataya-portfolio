@@ -37,15 +37,17 @@
   overflow: hidden;
   text-decoration: none;
   color: white;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
   transform: translateY(30px);
+  transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) var(--delay, 0s),
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: var(--delay, 0s);
 }
 
 .design-card.animate-in {
   opacity: 1;
   transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-image {
@@ -109,7 +111,7 @@
 
 
 .design-card:hover {
-  transform: translateY(-10px) !important;
+  transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -137,21 +139,32 @@
   transition: background 0.2s;
 }
 
-.yellow { color: #ffd700; }
-.teal { color: #4ecdc4; }
-.pink { color: #f8a5c2; }
-.orange { color: #ff6347; }
+.yellow {
+  color: #ffd700;
+}
+
+.teal {
+  color: #4ecdc4;
+}
+
+.pink {
+  color: #f8a5c2;
+}
+
+.orange {
+  color: #ff6347;
+}
 
 
 @media (max-width: 768px) {
   .figma-section {
     padding: 5rem 1.5rem;
   }
-  
+
   .designs-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .card-image {
     height: 180px;
   }
