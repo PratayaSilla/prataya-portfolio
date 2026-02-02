@@ -33,20 +33,12 @@ const ProjectsSection = () => {
       image: "/ptemplate.png"
     },
     {
-      title: "AI Image Generator",
+      title: "Simple Landing Page",
       description: "Frontend landing page of an AI Image generator",
       tags: ["HTML", "CSS", "React"],
       accentColor: "#FF6347",
       link: "https://progenix-ai.vercel.app/",
       image: "/aihero.png"
-    },
-    {
-      title: "More Projects",
-      description: "Click here to explore my work✨",
-      tags: ["My GitHub Profile"],
-      accentColor: "#ffd700",
-      link: "https://github.com/PratayaSilla",
-      image: "/more.svg"
     },
     {
       title: "You came for Designs?",
@@ -55,6 +47,14 @@ const ProjectsSection = () => {
       accentColor: "#fff",
       link: "/figma-designs",
       image: "/Cover.png"
+    },
+    {
+      title: "More Projects",
+      description: "Click here to explore my work✨",
+      tags: ["My GitHub Profile"],
+      accentColor: "#ffd700",
+      link: "https://github.com/PratayaSilla",
+      image: "/more.svg"
     },
     {
       title: "Coming up",
