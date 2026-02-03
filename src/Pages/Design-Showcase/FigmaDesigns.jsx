@@ -88,42 +88,42 @@ const FigmaDesigns = () => {
 
   return (
     <section id="figma-designs" className="figma-section" ref={sectionRef}>
-      <div className="container">
-        <h2 className="section-title">
-          <span className="yellow">/</span>Love to see you here❤️
-        </h2>
-        <p className="section-subtitle">
-          My <span className="teal">Figma creations</span> that blend <span className="orange">aesthetics</span> and <span className="pink">functionality</span>
-        </p>
+        <div className="container">
+          <h2 className="section-title">
+            <span className="yellow">/</span>Love to see you here❤️
+          </h2>
+          <p className="section-subtitle">
+            My <span className="teal">Figma creations</span> that blend <span className="orange">aesthetics</span> and <span className="pink">functionality</span>
+          </p>
 
-        <div className="designs-grid">
-          {designs.map((design, index) => (
-            <a
-              key={index}
-              href={design.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="design-card"
-              style={{ '--accent-color': ['#ffd700', '#4ecdc4', '#ff6347', '#f8a5c2'][index % 4] }}
-            >
-              <div className="card-image">
-                <img src={design.image} alt={design.title} />
-                <div className="image-overlay"></div>
-              </div>
-              <div className="card-content">
-                <h3>{design.title}</h3>
-                <p>{design.description}</p>
-                <div className="view-link">
-                  View in Figma <span className="arrow">→</span>
+          <div className="designs-grid">
+            {designs.map((design, index) => (
+              <a
+                key={index}
+                href={design.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="design-card"
+                style={{ '--accent-color': ['#ffd700', '#4ecdc4', '#ff6347', '#f8a5c2'][index % 4] }}
+              >
+                <div className="card-image">
+                  <img src={design.image} alt={design.title} />
+                  <div className="image-overlay"></div>
                 </div>
-              </div>
-              <div className="card-border"></div>
-            </a>
-          ))}
+                <div className="card-content">
+                  <h3>{design.title}</h3>
+                  <p>{design.description}</p>
+                  <div className="view-link">
+                    View in Figma <span className="arrow">→</span>
+                  </div>
+                </div>
+                <div className="card-border"></div>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-      <button className='back-btn' onClick={() => window.history.back()}>← Back</button>
-    </section>
+        <button className='back-btn' onClick={() => window.history.back()}>← Back</button>
+      </section>
   );
 };
 
