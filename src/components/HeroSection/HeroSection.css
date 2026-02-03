@@ -32,11 +32,11 @@ body {
   position: absolute;
   width: 312vmin;
   height: 170vmin;
-  background: 
+  background:
     radial-gradient(circle, rgb(255 215 0) 1px, transparent 1px),
-    radial-gradient(circle, rgba(78,205,196,0.15) 1px, transparent 1px),
-    radial-gradient(circle, rgba(248,165,194,0.15) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,99,71,0.15) 1px, transparent 1px);
+    radial-gradient(circle, rgba(78, 205, 196, 0.15) 1px, transparent 1px),
+    radial-gradient(circle, rgba(248, 165, 194, 0.15) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 99, 71, 0.15) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
   opacity: 0.5;
@@ -45,10 +45,13 @@ body {
 }
 
 @keyframes breathe {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     opacity: 0.3;
   }
+
   50% {
     transform: scale(1.05) rotate(1deg);
     opacity: 0.7;
@@ -107,7 +110,9 @@ body {
 }
 
 
-.split-char, .split-word, .split-line {
+.split-char,
+.split-word,
+.split-line {
   display: inline-block;
   will-change: transform, opacity;
   backface-visibility: hidden;
@@ -118,9 +123,11 @@ body {
   .hero-content {
     padding: 0 15px;
   }
-  
 
-  .split-char, .split-word, .split-line {
+
+  .split-char,
+  .split-word,
+  .split-line {
     animation-duration: 0.6s !important;
   }
 }

@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Background dots floating animation
+
       dotsRef.current.forEach((dot, index) => {
         gsap.to(dot, {
           y: () => gsap.utils.random(-20, 20),
@@ -24,7 +24,7 @@ const HeroSection = () => {
         });
       });
 
-      // 2. Magnetic button effect for interactive elements
+
       const magneticElements = document.querySelectorAll('.magnetic');
       magneticElements.forEach(element => {
         element.addEventListener('mousemove', (e) => {
@@ -50,7 +50,7 @@ const HeroSection = () => {
         });
       });
 
-      // 3. Continuous subtle pulse animation for the entire hero
+
       gsap.to(heroContainerRef.current, {
         scale: 1.02,
         duration: 4,
@@ -59,7 +59,7 @@ const HeroSection = () => {
         yoyo: true,
       });
 
-      // 4. Interactive cursor follower (optional)
+
       if (cursorRef.current) {
         document.addEventListener('mousemove', (e) => {
           gsap.to(cursorRef.current, {
@@ -70,7 +70,7 @@ const HeroSection = () => {
           });
         });
 
-        // Scale up when hovering over magnetic elements
+
         magneticElements.forEach(element => {
           element.addEventListener('mouseenter', () => {
             gsap.to(cursorRef.current, {
@@ -90,7 +90,6 @@ const HeroSection = () => {
         });
       }
 
-      // 5. Text glow animation on hover
       const textElements = document.querySelectorAll('.hero-heading');
       textElements.forEach(text => {
         text.addEventListener('mouseenter', () => {
@@ -115,30 +114,6 @@ const HeroSection = () => {
     return () => ctx.revert();
   }, []);
 
-  // Create background dots
-  useEffect(() => {
-    const container = heroContainerRef.current;
-    if (!container) return;
-
-    const dotsContainer = container.querySelector('.background-dots');
-    const numberOfDots = 15;
-
-    for (let i = 0; i < numberOfDots; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'floating-dot';
-      dot.style.cssText = `
-        position: absolute;
-        width: ${gsap.utils.random(4, 8)}px;
-        height: ${gsap.utils.random(4, 8)}px;
-        background: rgba(255, 255, 255, ${gsap.utils.random(0.1, 0.3)});
-        border-radius: 50%;
-        left: ${gsap.utils.random(5, 95)}%;
-        top: ${gsap.utils.random(5, 95)}%;
-      `;
-      dotsContainer.appendChild(dot);
-      dotsRef.current.push(dot);
-    }
-  }, []);
 
   return (
     <div className="hero-container" ref={heroContainerRef}>
