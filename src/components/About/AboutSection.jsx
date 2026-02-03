@@ -25,12 +25,17 @@ const AboutSection = () => {
   }, []);
 
   const techStack = [
-    { name: "Javascript", color: "#61DAFB" },
+    { name: "Javascript", color: "#F7DF1E" },
     { name: "Node.js", color: "#68A063" },
-    { name: "React.js", color: "#049EF4" },
-    { name: "MySQL", color: "#A259FF" },
-    { name: "Python", color: "#88CE02" },
-    { name: "Figma", color: "#FFCA28" },
+    { name: "React.js", color: "#61DAFB" },
+    { name: "MySQL", color: "#00758F" },
+    { name: "Python", color: "#3776AB" },
+    { name: "MongoDB", color: "#47A248" },
+    { name: "TypeScript", color: "#3178C6" },
+    { name: "Next", color: "#FFFFFF" },
+    { name: "Express", color: "#259DFF" },
+    { name: "Adobe XD", color: "#FF61F6" },
+    { name: "Figma", color: "#F24E1E" },
   ];
 
   return (
