@@ -9,15 +9,17 @@ import SmoothScroll from "../../components/SmoothScroll/SmoothScroll";
 
 export default function Landing() {
   return (
-    <SmoothScroll>
-      <>
-        <OsmoMenu />
-        <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <EducationSection />
-        <FooterContact />
-      </>
-    </SmoothScroll>
+    <>
+      <OsmoMenu />
+      <SmoothScroll>
+        <>
+          <HeroSection />
+          <AboutSection />
+          <ProjectsSection />
+          <EducationSection />
+          <FooterContact />
+        </>
+      </SmoothScroll>
+    </>
   );
 }
