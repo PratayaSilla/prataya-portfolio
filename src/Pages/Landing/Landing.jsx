@@ -1,5 +1,5 @@
 import React from "react";
-import HamburgerMenu from "../../components/Hamburger/HamburgerMenu";
+import OsmoMenu from "../../components/OsmoMenu/OsmoMenu";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import AboutSection from "../../components/About/AboutSection";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
@@ -11,7 +11,7 @@ export default function Landing() {
   return (
     <SmoothScroll>
       <>
-        <HamburgerMenu />
+        <OsmoMenu />
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
