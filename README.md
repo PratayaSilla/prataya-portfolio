@@ -26,17 +26,4 @@ Hey there! Welcome to the codebase of my personal developer portfolio — built 
 | Vite       | Lightning-fast bundler |
 | Vercel     | Deployment         |
 
----
 
-## 🖼 Preview
-
-![screenshot](./preview.png) <!-- Optional: Add a screenshot of the site if you want -->
-
----
-
-## 🛠 How to Run Locally
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/PratayaSilla/prataya-portfolio.git
-   cd prataya-portfolio
